@@ -1,0 +1,40 @@
+body {
+    background-image: url(../img/lago.jpg);
+    font-family: 'Source Serif Pro', serif;
+}
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+    font-family: 'Source Serif Pro', serif;
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.container p  {
+    display: inline;
+    font-size:30px;
+    text-align:center;
+    font-family: 'Source Serif Pro', serif;
+    color: white;
+    
+
+
+}
+
+
+
+
+
+ 
+

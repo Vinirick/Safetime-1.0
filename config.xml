@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="io.cordova.hellocordova" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>HelloCordova</name>
+    <description>
+        A sample Apache Cordova application that responds to the deviceready event.
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+		<feature name="Launcher">
+    <param name="android-package" value="com.hutchind.cordova.plugins.launcher.Launcher" />
+</feature>
+    
+	window.plugins.launcher.canLaunch({uri:'fb://'}, successCallback, errorCallback);
+    </platform>
+	 
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+		<feature name="Launcher">
+    <param name="ios-package" value="Launcher" />
+</feature>
+<gap:config-file platform="ios" parent="LSApplicationQueriesSchemes" overwrite="true">
+    <array>
+        <string>customSchemeName</string>
+        <string>fb</string>
+    </array>
+</gap:config-file>
+ window.plugins.launcher.canLaunch({uri:'fb://'}, successCallback, errorCallback);
+    </platform>
+    <plugin name="cordova-plugin-app-launcher" spec="https://github.com/nchutchind/cordova-plugin-app-launcher.git" />
+    <engine name="browser" spec="^5.0.4" />
+    <engine name="android" spec="^7.0.0" />
+</widget>
